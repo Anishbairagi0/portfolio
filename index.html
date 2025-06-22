@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anish bairagi - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <h2>Anish Bairagi</h2>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#certifications" class="nav-link">Certifications</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Hi,<br> I'm <span class="accent-text">Anish bairagi</span></h1>
+      <p class="hero-subtitle">Developer & Aspiring Cyber Defender</p>
+      <p class="hero-description">I’m passionate about learning web technologies and exploring how AI can be part of creative solutions.</p>
+      <button class="cta-button" onclick="scrollToSection('about')">
+        More About Me
+        <i data-feather="arrow-right"></i>
+      </button>
+    </div>
+    <div class="hero-image">
+      <div class="hero-avatar">
+        <img src="img/avtr.webp" alt="Anish Bairagi" class="hero-photo"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'avatar-placeholder\'><i data-feather=\'user\'></i><span>Anish Bairagi</span></div>'; feather.replace();">
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-main">
+          <div class="about-text">
+            <h3>My Journey</h3>
+            <p>I'm passionate about technology and have over 5 years of experience exploring and growing
+              within the tech industry. I am focused on building a career in cybersecurity, where I can
+              apply my knowledge, embrace new challenges, and contribute to creating secure, reliable
+              solutions. I love turning complex problems into simple, meaningful outcomes and bringing
+              ideas to life through hard work and dedication.</p>
+
+            <p>My journey in technology began with a deep curiosity to understand how things work and how
+              technology can solve real-world problems. Since then, I’ve been committed to continuously
+              learning and evolving with the ever-changing tech landscape, always seeking ways to
+              strengthen my skills and make a positive impact.</p>
+
+            <p>When I’m not working, you’ll find me exploring emerging technologies, studying new
+              developments in cybersecurity, or reflecting on innovative ideas that can make a difference.
+            </p>
+
+          </div>
+
+          <div class="education">
+            <h3>Education & Learning</h3>
+            <p class="education-summary">
+              I am currently a Class 11 Science (PCM) student at Jawahar Navodaya Vidyalaya, Buranabad. I
+              secured 84.4% in my Class 10 board exams, with a strong score of 92 in Mathematics.
+              Alongside my studies, I actively pursue my passion for technology through self-learning and
+              participation in tech events. I was proud to be a part of the world’s biggest hackathon
+              powered by Bolt, where I gained valuable hands-on experience and collaboration skills. I am
+              committed to continuous learning and always eager to explore new technologies, especially in
+              cybersecurity.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="about-sidebar">
+          <div class="about-photo">
+            <img src="img/nnn.jpg" alt="About Anish Bairagi" class="about-photo-img"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i data-feather=\'user\'></i><span>About Photo</span></div>'; feather.replace();">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="certifications-section" id="certifications">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="img/frcrt.jpg" alt="HTML5 & CSS3 Certification" class="cert-photo"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i data-feather=\'code\'></i><span>HTML5 & CSS3</span></div>'; if(typeof feather !== 'undefined') feather.replace();">
+          </div>
+          <div class="cert-info">
+            <h4>Frontend Development Certification</h4>
+            <p class="cert-issuer">Oneroadmap • 2025</p>
+            <p class="cert-description">Advanced certification in modern web standards and responsive
+              design.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="img/pycer.jpg" alt="Python Programming Certification" class="cert-photo"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i data-feather=\'database\'></i><span>Python Programming</span></div>'; if(typeof feather !== 'undefined') feather.replace();">
+          </div>
+          <div class="cert-info">
+            <h4>Python Programming Certification</h4>
+            <p class="cert-issuer">Python Training Progame • 2023</p>
+            <p class="cert-description">Professional certification covering Python fundamentals and advanced
+              concepts.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="img/htmcert.jpg" alt="Ethical Hacking Certification" class="cert-photo"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i data-feather=\'shield\'></i><span>Ethical Hacking</span></div>'; if(typeof feather !== 'undefined') feather.replace();">
+          </div>
+          <div class="cert-info">
+            <h4>Ethical Hacking Certification</h4>
+            <p class="cert-issuer">Programing Hub • 2022</p>
+            <p class="cert-description">Comprehensive certification of fundamental knowledge in cybersecurity</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container00">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/ai.png" alt="Task Management App Preview" class="project-photo"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'project-placeholder\'><i data-feather=\'smartphone\'></i><span>Task Management App</span></div>'; feather.replace();">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">VED — Interactive Learning Tools for Students</h3>
+            <p class="project-description">VED is a project designed to support students with simple, interactive tools that make learning clearer and more engaging. It includes a Concept Explainer, Topic Comparer, and Quiz Generator — all aimed at helping students understand topics, explore differences, and test their knowledge in a fun way.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JS</span>
+              <span class="tech-tag">Gemini 2.O Flash</span>
+            </div>
+            <div class="project-links">
+              <a href="https://vedai.netlify.app/">
+              <button class="project-btn primary">
+                <i data-feather="external-link"></i>
+              View Live
+              </button></a><a href="https://github.com/Anishbairagi0/ved">
+              <button class="project-btn secondary">
+                <i data-feather="github"></i>
+                Source Code
+              </button></a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's work together</h3>
+          <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or
+            just want to say hi, feel free to reach out!</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i data-feather="mail"></i>
+              <span>anishbairagi15@gmail.com</span>
+            </div>
+            <div class="contact-method">
+              <i data-feather="instagram"></i>
+              <span>instagram.com/ethical_anish</span>
+            </div>
+            <div class="contact-method">
+              <i data-feather="github"></i>
+              <span>github.com/anishbairagi0</span>
+            </div>
+            <div class="contact-method">
+              <i data-feather="code"></i>
+              <span>replit.com/@anishbairagi</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i data-feather="send"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Anish bairagi. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/anishbairagi0" class="social-link" target="_blank">
+          <i data-feather="github"></i>
+        </a>
+        <a href="https://instagram.com/ethical_anish" class="social-link" target="_blank">
+          <i data-feather="instagram"></i>
+        </a>
+        <a href="https://replit.com/@anishbairagi" class="social-link" target="_blank">
+          <i data-feather="code"></i>
+        </a>
+        <a href="mailto:anishbairagi15@gmail.com" class="social-link">
+          <i data-feather="mail"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
