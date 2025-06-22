@@ -87,7 +87,7 @@ function initializeContactForm() {
     const submitBtn = contactForm.querySelector('.submit-btn');
 
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+
 
         // Get form data
         const formData = new FormData(this);
@@ -108,7 +108,7 @@ function initializeContactForm() {
 
         // Simulate form submission
         submitBtn.innerHTML = '<span>Sending...</span>';
-        submitBtn.disabled = true;
+
 
         // Simulate API call
         setTimeout(() => {
