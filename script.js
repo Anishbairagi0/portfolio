@@ -84,53 +84,26 @@ function initializeScrollEffects() {
 // Contact form functionality
 function initializeContactForm() {
     const contactForm = document.getElementById('contact-form');
-    const submitBtn = contactForm.querySelector('.submit-btn');
 
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();  // Stop default form submission
-
-        // Get form data
         const formData = new FormData(this);
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
 
-        // Basic validation
         if (!name || !email || !message) {
+            e.preventDefault();  // stop submission
             showNotification('Please fill in all fields', 'error');
             return;
         }
 
         if (!isValidEmail(email)) {
+            e.preventDefault();  // stop submission
             showNotification('Please enter a valid email address', 'error');
             return;
         }
 
-        // Update button
-        submitBtn.innerHTML = '<span>Sending...</span>';
-        submitBtn.disabled = true;
-
-        // Send via fetch
-        fetch('https://formsubmit.co/anishbairagi15@gmail.com', {
-            method: 'POST',
-            body: formData
-        })
-        .then(res => {
-            if (!res.ok) throw new Error('Submission failed');
-            return res.text();
-        })
-        .then(() => {
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-        })
-        .catch(() => {
-            showNotification('Oops! Something went wrong. Please try again.', 'error');
-        })
-        .finally(() => {
-            submitBtn.innerHTML = '<span>Send Message</span><i data-feather="send"></i>';
-            submitBtn.disabled = false;
-            feather.replace();
-        });
+        // ✅ If all is valid, allow normal submission to FormSubmit
     });
 }
 
