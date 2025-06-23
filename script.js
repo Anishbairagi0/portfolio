@@ -87,7 +87,7 @@ function initializeContactForm() {
     const submitBtn = contactForm.querySelector('.submit-btn');
 
     contactForm.addEventListener('submit', function(e) {
-
+        e.preventDefault();  // Stop default form submission
 
         // Get form data
         const formData = new FormData(this);
@@ -106,19 +106,34 @@ function initializeContactForm() {
             return;
         }
 
-        // Simulate form submission
+        // Update button
         submitBtn.innerHTML = '<span>Sending...</span>';
+        submitBtn.disabled = true;
 
-
-        // Simulate API call
-        setTimeout(() => {
+        // Send via fetch
+        fetch('https://formsubmit.co/anishbairagi15@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => {
+            if (!res.ok) throw new Error('Submission failed');
+            return res.text();
+        })
+        .then(() => {
             showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
             contactForm.reset();
+        })
+        .catch(() => {
+            showNotification('Oops! Something went wrong. Please try again.', 'error');
+        })
+        .finally(() => {
             submitBtn.innerHTML = '<span>Send Message</span><i data-feather="send"></i>';
             submitBtn.disabled = false;
             feather.replace();
-        }, 2000);
+        });
     });
+}
+
 
     // Form input animations
     const formInputs = contactForm.querySelectorAll('input, textarea');
